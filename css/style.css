@@ -281,3 +281,115 @@ footer { border-top: 1px solid #eef2f6; padding: 26px 0; color: #475569; text-al
   color: #0f172a !important;
   border-color: #d1d5db !important;
 }
+
+/* Restore original CTA button styling and font */
+.btn,
+.btn-primary,
+.btn-ghost {
+  font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif !important;
+  font-weight: 700 !important;   /* matches your screenshot */
+  letter-spacing: 0.2px;
+}
+
+/* Primary button fix */
+.btn-primary,
+.btn-primary:visited {
+  background: #0f172a !important;
+  color: #f1f5f9 !important;
+  border-color: #0f172a !important;
+  border-radius: 14px !important;   /* matches your rounded button */
+  padding: 16px 32px !important;    /* identical proportions */
+  font-size: 1.25rem !important;    /* same as screenshot */
+}
+
+/* Hover */
+.btn-primary:hover {
+  background: #15203b !important;
+  color: #ffffff !important;
+}
+
+/* Ghost button */
+.btn-ghost,
+.btn-ghost:visited {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e5e7eb !important;
+  border-radius: 14px !important;
+  padding: 16px 32px !important;
+  font-size: 1.25rem !important;
+}
+
+.btn-ghost:hover {
+  background: #f9fafb !important;
+  border-color: #d1d5db !important;
+}
+
+/* ===================================================== */
+/* FORCE NAVBAR TO KEEP ORIGINAL STYLE (Bootstrap fix)   */
+/* ===================================================== */
+
+/* Global override to neutralize Bootstrap navbar rules */
+nav,
+#navbar,
+.nav-row,
+.nav-links a,
+.brand,
+.badge {
+  font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif !important;
+  font-weight: 500 !important;
+  color: #e2e8f0 !important; /* navbar text color */
+}
+
+/* Proper dark background (Bootstrap overrides removed) */
+nav,
+#navbar {
+  background: #0f172a !important;
+  border-bottom: 1px solid #1e293b !important;
+  padding: 16px 0 !important;
+  height: auto !important;
+}
+
+/* Make sure Bootstrap’s .navbar-light / .navbar-dark DO NOTHING */
+.navbar,
+.navbar-light,
+.navbar-dark {
+  background: none !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+/* Brand name — restore size + weight */
+.brand {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+}
+
+/* Badge */
+.badge {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Nav links */
+.nav-links a {
+  padding-bottom: 4px !important;
+  font-weight: 600 !important;
+  color: #e2e8f0 !important;
+}
+
+.nav-links a:hover {
+  color: #60a5fa !important;
+}
+
+/* Underline hover effect */
+.nav-links a::after {
+  background: #60a5fa !important;
+}
+
+/* Prevent Bootstrap flexbox from collapsing list layout */
+.nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 22px !important;
+}
