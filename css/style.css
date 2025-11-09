@@ -252,3 +252,32 @@ footer { border-top: 1px solid #eef2f6; padding: 26px 0; color: #475569; text-al
 .project-link a:hover {
   text-decoration: none;
 }
+
+/* Restore original CTA button style */
+.btn-primary,
+.btn-primary:visited {
+  background: #0f172a !important;
+  color: #f1f5f9 !important;
+  border-color: #0f172a !important;
+}
+
+/* Hover effect */
+.btn-primary:hover {
+  background: #15203b !important; /* slightly lighter navy */
+  color: #ffffff !important;
+  border-color: #15203b !important;
+}
+
+/* Ghost button also reverted */
+.btn-ghost,
+.btn-ghost:visited {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e5e7eb !important;
+}
+
+.btn-ghost:hover {
+  background: #f9fafb !important;
+  color: #0f172a !important;
+  border-color: #d1d5db !important;
+}
