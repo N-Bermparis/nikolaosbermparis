@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Favorite Books — Nikolaos Bermparis</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .book-grid {
+      display: grid;
+      gap: 26px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      margin-top: 40px;
+    }
+
+    .book-card {
+      background: #ffffff;
+      border: 1px solid #eef2f6;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transition: transform .15s ease, box-shadow .3s ease;
+    }
+
+    .book-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+    }
+
+    .book-cover {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      background: #f3f4f6;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .book-content {
+      padding: 16px 18px 20px;
+    }
+
+    .book-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 6px;
+    }
+
+    .book-author {
+      color: #4b5563;
+      font-size: 0.98rem;
+      margin-bottom: 10px;
+    }
+
+    .book-link {
+      color: #1e3a8a;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .book-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container nav-row">
+    <div class="brand">Nikolaos Bermparis</div>
+    <span class="badge">PhD Candidate • Cybersecurity & AI</span>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="https://github.com/N-Bermparis">Projects</a></li>
+      <li><a href="../index.html#events">Presentations</a></li>
+      <li><a href="../index.html#research">Research Topics</a></li>
+      <li><a href="/art/books.html">Books</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../contact/secure.html">Contact / CV</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="container" style="padding-top:120px;">
+    <h1 style="text-align:center; font-size:2rem; color:#111827; margin-bottom:10px;">
+      📚 Favorite Books
+    </h1>
+    <p class="section-lead" style="margin-bottom:40px;">
+      A selection of books I've enjoyed — literature, science, philosophy, and personal development.
+    </p>
+
+    <div class="book-grid">
+
+      <!-- 1984 -->
+      <div class="book-card">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/id/7222246-L.jpg" alt="1984">
+        <div class="book-content">
+          <div class="book-title">1984</div>
+          <div class="book-author">George Orwell</div>
+          <a class="book-link" href="https://www.goodreads.com/book/show/5470.1984" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+      <!-- Factfulness -->
+      <div class="book-card">
+        <img class="book-cover" src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1544963815i/34890015.jpg" alt="Factfulness">
+        <div class="book-content">
+          <div class="book-title">Factfulness</div>
+          <div class="book-author">Hans Rosling</div>
+          <a class="book-link" href="https://www.goodreads.com/book/show/34890015-factfulness" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+      <!-- Think and Grow Rich -->
+      <div class="book-card">
+        <img class="book-cover" src="https://m.media-amazon.com/images/I/61IxJuRI39L._AC_UF1000,1000_QL80_.jpg" alt="Think and Grow Rich">
+        <div class="book-content">
+          <div class="book-title">Think and Grow Rich</div>
+          <div class="book-author">Napoleon Hill</div>
+          <a class="book-link" href="https://www.goodreads.com/book/show/30186948-think-and-grow-rich" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+      <!-- Meditations -->
+      <div class="book-card">
+        <img class="book-cover" src="https://images.penguinrandomhouse.com/cover/9780141395869" alt="Meditations">
+        <div class="book-content">
+          <div class="book-title">Meditations</div>
+          <div class="book-author">Marcus Aurelius</div>
+          <a class="book-link" href="https://www.goodreads.com/book/show/30659.Meditations" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+      <!-- Homo Sapiens -->
+      <div class="book-card">
+        <img class="book-cover" src="https://m.media-amazon.com/images/I/713jIoMO3UL.jpg" alt="Sapiens">
+        <div class="book-content">
+          <div class="book-title">Sapiens</div>
+          <div class="book-author">Yuval Noah Harari</div>
+          <a class="book-link" href="https://www.goodreads.com/book/show/23692271-sapiens" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+      <!-- The Plague -->
+      <div class="book-card">
+        <img class="book-cover" src="https://dauntbooks.co.uk/wp-content/uploads/2020/03/9780141185132.jpg" alt="The Plague">
+        <div class="book-content">
+          <div class="book-title">The Plague</div>
+          <div class="book-author">Albert Camus</div>
+          <a class="book-link" href="https://www.goodreads.com/book/show/11989.The_Plague" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+      <!-- The Trial -->
+      <div class="book-card">
+        <img class="book-cover" src="https://m.media-amazon.com/images/I/91kVls2-3bL.jpg" alt="The Trial">
+        <div class="book-content">
+          <div class="book-title">The Trial</div>
+          <div class="book-author">Franz Kafka</div>
+          <a class="book-link" href="https://www.goodreads.com/book/show/17690.The_Trial" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+      <!-- Black Holes -->
+      <div class="book-card">
+        <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/6/61/BriefAnswersToTheBigQuestions-BookCover.png" alt="Black Hole Book">
+        <div class="book-content">
+          <div class="book-title">What is Inside a Black Hole?</div>
+          <div class="book-author">Stephen Hawking</div>
+          <a class="book-link" href="https://www.goodreads.com/en/book/show/57916525" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+      <!-- The Idiot -->
+      <div class="book-card">
+        <img class="book-cover" src="https://www.thebookshop.es/productimages/1200/the-idiot---fyodor-dostoyevsky_263328.jpg" alt="The Idiot">
+        <div class="book-content">
+          <div class="book-title">The Idiot</div>
+          <div class="book-author">Fyodor Dostoyevsky</div>
+          <a class="book-link" href="https://www.goodreads.com/book/show/12505.The_Idiot" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+      <!-- Chess -->
+      <div class="book-card">
+        <img class="book-cover" src="https://images.penguinrandomhouse.com/cover/9780241630822" alt="Chess">
+        <div class="book-content">
+          <div class="book-title">Chess</div>
+          <div class="book-author">Stefan Zweig</div>
+          <a class="book-link" href="https://www.goodreads.com/book/show/14882680-chess" target="_blank">View on Goodreads →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <footer>
+    <div class="container">
+      © 2025 Nikolaos Bermparis — All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
