@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resources — Nikolaos Bermparis</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* Library Index Card Style */
+    .library-grid {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      margin-top: 20px;
+    }
+
+    .library-card {
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 18px 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      transition: transform .15s ease, box-shadow .2s ease;
+    }
+
+    .library-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    }
+
+    .lib-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .lib-url a {
+      font-family: "Courier New", monospace;
+      font-size: 0.88rem;
+      color: #1e40af;
+      word-break: break-all;
+    }
+
+    .lib-desc {
+      margin-top: 8px;
+      font-size: 0.94rem;
+      color: #4b5563;
+    }
+
+    .ascii-box {
+      font-family: "Courier New", monospace;
+      white-space: pre;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      padding: 18px;
+      font-size: 0.85rem;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin-bottom: 32px;
+      color: #1e293b;
+    }
+
+    /* Global offset so content never hides behind navbar */
+body {
+    padding-top: 110px;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+<nav id="navbar">
+  <div class="container nav-row">
+    <div class="brand">Nikolaos Bermparis</div>
+    <span class="badge">PhD Candidate • Cybersecurity & AI</span>
+    <ul class="nav-links">
+      <li><a href="/index.html#home">Home</a></li>
+      <li><a href="https://github.com/N-Bermparis">Projects</a></li>
+      <li><a href="/index.html#events">Presentations</a></li>
+      <li><a href="/index.html#research">Research Topics</a></li>
+      <li><a href="../art/books.html">Books</a></li>
+      <li><a href="/resources.html">Resources</a></li>
+      <li><a href="/contact/secure.html">Contact / CV</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+  <div class="container">
+
+    <h1 style="text-align:center; font-size:2rem; color:#111827;"> Useful Resources</h1>
+    <p class="section-lead" style="margin-bottom:40px;">
+      Curated datasets, frameworks, tools, papers, and standards for AI, ML, and cybersecurity research.
+    </p>
+
+
+
+    <!-- ================================================= -->
+    <!-- SECTION: DATASETS -->
+    <!-- ================================================= -->
+    <h2> Machine Learning & Open Datasets</h2>
+    <div class="library-grid">
+
+      <div class="library-card">
+        <h3 class="lib-title">MNIST Dataset</h3>
+        <p class="lib-url"> 
+          <a href="http://yann.lecun.com/exdb/mnist/" target="_blank">http://yann.lecun.com/exdb/mnist/</a>
+        </p>
+        <p class="lib-desc">Benchmark dataset for handwriting recognition.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">CIFAR-10 / CIFAR-100</h3>
+        <p class="lib-url"> 
+          <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank">
+            https://www.cs.toronto.edu/~kriz/cifar.html
+          </a>
+        </p>
+        <p class="lib-desc">Small-sized natural images widely used in deep learning.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">HuggingFace Open Datasets</h3>
+        <p class="lib-url"> 
+          <a href="https://huggingface.co/datasets" target="_blank">https://huggingface.co/datasets</a>
+        </p>
+        <p class="lib-desc">Thousands of curated datasets across all ML domains.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">ICS / SCADA Datasets</h3>
+        <p class="lib-url"> <a href="#" target="_blank">Add your ICS dataset links here</a></p>
+        <p class="lib-desc">Placeholder for SWaT, HAI, BATADAL and other industrial datasets.</p>
+      </div>
+
+    </div>
+
+    <!-- ================================================= -->
+    <!-- SECTION: ML ENGINEERING -->
+    <!-- ================================================= -->
+    <h2 style="margin-top:50px;"> ML Engineering & Reproducible Research</h2>
+    <div class="library-grid">
+
+      <div class="library-card">
+        <h3 class="lib-title">Jupyter Notebooks</h3>
+        <p class="lib-url"> <a href="https://jupyter.org/" target="_blank">https://jupyter.org/</a></p>
+        <p class="lib-desc">Interactive computing environment for research.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Weights & Biases</h3>
+        <p class="lib-url"> <a href="https://wandb.ai/" target="_blank">https://wandb.ai/</a></p>
+        <p class="lib-desc">Experiment tracking & model monitoring.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Keras</h3>
+        <p class="lib-url"> <a href="https://keras.io/" target="_blank">https://keras.io/</a></p>
+        <p class="lib-desc">High-level neural network API.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">PyTorch</h3>
+        <p class="lib-url"> <a href="https://pytorch.org/" target="_blank">https://pytorch.org/</a></p>
+        <p class="lib-desc">Flexible deep learning framework.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">TensorFlow</h3>
+        <p class="lib-url"> <a href="https://www.tensorflow.org/" target="_blank">https://www.tensorflow.org/</a></p>
+        <p class="lib-desc">Machine learning platform developed by Google.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">HuggingFace Transformers</h3>
+        <p class="lib-url"> 
+          <a href="https://huggingface.co/docs/transformers" target="_blank">
+            https://huggingface.co/docs/transformers
+          </a>
+        </p>
+        <p class="lib-desc">State-of-the-art transformer models (BERT, GPT, T5).</p>
+      </div>
+
+    </div>
+
+    <!-- ================================================= -->
+    <!-- SECTION: PRIVACY / CRYPTO -->
+    <!-- ================================================= -->
+    <h2 style="margin-top:50px;"> Differential Privacy & Cryptography</h2>
+    <div class="library-grid">
+
+      <div class="library-card">
+        <h3 class="lib-title">Opacus (PyTorch)</h3>
+        <p class="lib-url"> <a href="https://opacus.ai/" target="_blank">https://opacus.ai/</a></p>
+        <p class="lib-desc">Differential Privacy for PyTorch.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">TensorFlow Privacy</h3>
+        <p class="lib-url"> 
+          <a href="https://github.com/tensorflow/privacy" target="_blank">
+            https://github.com/tensorflow/privacy
+          </a>
+        </p>
+        <p class="lib-desc">Differential Privacy for TensorFlow.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Python Cryptography</h3>
+        <p class="lib-url"> <a href="https://cryptography.io/" target="_blank">https://cryptography.io/</a></p>
+        <p class="lib-desc">Robust cryptographic primitives for Python.</p>
+      </div>
+
+    </div>
+
+    <!-- ================================================= -->
+    <!-- SECTION: SECURITY TOOLS -->
+    <!-- ================================================= -->
+    <h2 style="margin-top:50px;"> Security Research & Analysis Tools</h2>
+    <div class="library-grid">
+
+      <div class="library-card">
+        <h3 class="lib-title">Ghidra</h3>
+        <p class="lib-url"> <a href="https://ghidra-sre.org/" target="_blank">https://ghidra-sre.org/</a></p>
+        <p class="lib-desc">Reverse engineering suite developed by NSA.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Zeek</h3>
+        <p class="lib-url"> <a href="https://zeek.org/" target="_blank">https://zeek.org/</a></p>
+        <p class="lib-desc">Network security monitoring framework.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Suricata</h3>
+        <p class="lib-url"> <a href="https://suricata.io/" target="_blank">https://suricata.io/</a></p>
+        <p class="lib-desc">IDS/IPS engine for network defense.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Nmap</h3>
+        <p class="lib-url"> <a href="https://nmap.org/" target="_blank">https://nmap.org/</a></p>
+        <p class="lib-desc">Network scanner and discovery tool.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Wireshark</h3>
+        <p class="lib-url"> <a href="https://www.wireshark.org/" target="_blank">https://www.wireshark.org/</a></p>
+        <p class="lib-desc">Packet analysis and protocol inspection.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Burp Suite Community</h3>
+        <p class="lib-url"> 
+          <a href="https://portswigger.net/burp/communitydownload" target="_blank">
+            https://portswigger.net/burp/communitydownload
+          </a>
+        </p>
+        <p class="lib-desc">Web security and penetration testing suite.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">YARA</h3>
+        <p class="lib-url"> <a href="https://virustotal.github.io/yara/" target="_blank">https://virustotal.github.io/yara/</a></p>
+        <p class="lib-desc">Pattern-matching for malware research.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">VirusTotal</h3>
+        <p class="lib-url"> <a href="https://www.virustotal.com/" target="_blank">https://www.virustotal.com/</a></p>
+        <p class="lib-desc">Malware scanning and sandboxing platform.</p>
+      </div>
+
+    </div>
+
+    <!-- ================================================= -->
+    <!-- SECTION: STANDARDS -->
+    <!-- ================================================= -->
+    <h2 style="margin-top:50px;"> Standards & Frameworks</h2>
+    <div class="library-grid">
+
+      <div class="library-card">
+        <h3 class="lib-title">NIST SP 800 Series</h3>
+        <p class="lib-url"> 
+          <a href="https://csrc.nist.gov/publications/sp800" target="_blank">
+            https://csrc.nist.gov/publications/sp800
+          </a>
+        </p>
+        <p class="lib-desc">Risk management, crypto, system security guidelines.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">MITRE ATT&CK</h3>
+        <p class="lib-url"> <a href="https://attack.mitre.org/" target="_blank">https://attack.mitre.org/</a></p>
+        <p class="lib-desc">Adversary tactics, techniques, and procedures (TTPs).</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">OWASP Top 10</h3>
+        <p class="lib-url"> 
+          <a href="https://owasp.org/www-project-top-ten/" target="_blank">
+            https://owasp.org/www-project-top-ten/
+          </a>
+        </p>
+        <p class="lib-desc">Most critical web application risks.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">OWASP Cheat Sheets</h3>
+        <p class="lib-url"> 
+          <a href="https://cheatsheetseries.owasp.org/" target="_blank">
+            https://cheatsheetseries.owasp.org/
+          </a>
+        </p>
+        <p class="lib-desc">Practical secure development guidelines.</p>
+      </div>
+
+    </div>
+
+    <!-- ================================================= -->
+    <!-- SECTION: PAPERS -->
+    <!-- ================================================= -->
+    <h2 style="margin-top:50px;">Foundational Research Papers</h2>
+    <div class="library-grid">
+
+      <div class="library-card">
+        <h3 class="lib-title">Generative Adversarial Nets</h3>
+        <p class="lib-url"> <a href="https://arxiv.org/abs/1701.00160" target="_blank">https://arxiv.org/abs/1701.00160</a></p>
+        <p class="lib-desc">Original GANs paper by Goodfellow (NIPS 2014).</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Deep Learning Book</h3>
+        <p class="lib-url">
+           <a href="https://www.deeplearningbook.org/" target="_blank">https://www.deeplearningbook.org/</a>
+        </p>
+        <p class="lib-desc">Seminal textbook on deep learning theory.</p>
+      </div>
+
+    </div>
+
+    <!-- ================================================= -->
+    <!-- SECTION: GDPR -->
+    <!-- ================================================= -->
+    <h2 style="margin-top:50px;">Legal & Privacy Resources</h2>
+    <div class="library-grid">
+
+      <div class="library-card">
+        <h3 class="lib-title">GDPR Full Text</h3>
+        <p class="lib-url"> <a href="https://gdpr-info.eu/" target="_blank">https://gdpr-info.eu/</a></p>
+        <p class="lib-desc">Complete European GDPR regulation.</p>
+      </div>
+
+    </div>
+
+    <!-- ================================================= -->
+    <!-- SECTION: BONUS -->
+    <!-- ================================================= -->
+    <h2 style="margin-top:50px;">Bonus</h2>
+    <div class="library-grid">
+
+      <div class="library-card">
+        <h3 class="lib-title">OverTheWire Wargames</h3>
+        <p class="lib-url"> <a href="https://overthewire.org/wargames" target="_blank">https://overthewire.org/wargames</a></p>
+        <p class="lib-desc">Beginner-to-advanced security challenge platform.</p>
+      </div>
+
+      <div class="library-card">
+        <h3 class="lib-title">Nmap Movies</h3>
+        <p class="lib-url"> <a href="https://nmap.org/movies/" target="_blank">https://nmap.org/movies/</a></p>
+        <p class="lib-desc">A curated list of movies where Nmap appears.</p>
+      </div>
+
+    </div>
+
+  </div> <!-- container -->
+
+
+    <footer>
+    <div class="container">
+      © 2025 Nikolaos Bermparis — All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
