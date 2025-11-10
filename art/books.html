@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Favorite Books — Nikolaos Bermparis</title>
+
+  <!-- Fonts + Main CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 
+  <!-- Page-specific book styling -->
   <style>
     .book-grid {
       display: grid;
@@ -55,177 +60,183 @@
     .book-link {
       color: #1e3a8a;
       font-weight: 600;
-      text-decoration: none;
+      text-decoration: underline;
+      font-size: 0.95rem;
     }
 
     .book-link:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   </style>
-
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav id="navbar" class="navbar navbar-expand-lg fixed-top" style="background:#0f172a; border-bottom:1px solid #1e293b;">
-  <div class="container">
+<!-- ✅ NAVBAR (same as index.html) -->
+<nav class="navbar">
+  <div class="container nav-inner">
 
-    <!-- Brand -->
-    <a class="navbar-brand brand" href="/index.html" style="color:#f1f5f9; font-weight:700;">
-      Nikolaos Bermparis
-    </a>
+    <div class="nav-left">
+      <div class="brand">Nikolaos Bermparis</div>
+      <span class="badge">PhD Candidate • Cybersecurity & AI</span>
+    </div>
 
-    <!-- Badge -->
-    <span class="badge d-none d-lg-inline" 
-          style="background:#1e293b; color:#e2e8f0; font-size:0.9rem; border:1px solid #334155;">
-      PhD Candidate • Cybersecurity & AI
-    </span>
-
-    <!-- Hamburger -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"
-            style="border-color:#334155;">
-      <span class="navbar-toggler-icon" 
-            style="filter: invert(1) brightness(2);"></span>
+    <!-- Mobile hamburger -->
+    <button class="nav-toggle" id="navToggle" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
 
     <!-- Menu items -->
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto nav-links" style="gap:22px;">
-        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://github.com/N-Bermparis" target="_blank">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#events">Presentations</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#research">Research Topics</a></li>
-        <li class="nav-item"><a class="nav-link" href="/art/books.html">Books</a></li>
-        <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact/secure.html">Contact / CV</a></li>
-      </ul>
-    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#home">Home</a></li>
+      <li><a href="https://github.com/N-Bermparis" target="_blank">Projects</a></li>
+      <li><a href="../index.html#events">Presentations</a></li>
+      <li><a href="../index.html#research">Research Topics</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../contact/secure.html">Contact / CV</a></li>
+    </ul>
 
   </div>
 </nav>
 
+<!-- ✅ MAIN CONTENT -->
+<div class="container" style="padding-top:120px;">
+  <h1 style="text-align:center; font-size:2rem; color:#111827; margin-bottom:10px;">
+    📚 Favorite Books
+  </h1>
+  <p class="section-lead" style="margin-bottom:40px;">
+    A selection of books I've enjoyed — literature, science, philosophy, and personal development.
+  </p>
 
-  <div class="container" style="padding-top:120px;">
-    <h1 style="text-align:center; font-size:2rem; color:#111827; margin-bottom:10px;">
-      📚 Favorite Books
-    </h1>
-    <p class="section-lead" style="margin-bottom:40px;">
-      A selection of books I've enjoyed — literature, science, philosophy, and personal development.
-    </p>
+  <div class="book-grid">
 
-    <div class="book-grid">
-
-      <!-- 1984 -->
-      <div class="book-card">
-        <img class="book-cover" src="https://covers.openlibrary.org/b/id/7222246-L.jpg" alt="1984">
-        <div class="book-content">
-          <div class="book-title">1984</div>
-          <div class="book-author">George Orwell</div>
-          <a class="book-link" href="https://www.goodreads.com/book/show/5470.1984" target="_blank">View on Goodreads →</a>
-        </div>
+    <!-- 1984 -->
+    <div class="book-card">
+      <img class="book-cover" src="https://covers.openlibrary.org/b/id/7222246-L.jpg" alt="1984">
+      <div class="book-content">
+        <div class="book-title">1984</div>
+        <div class="book-author">George Orwell</div>
+        <a class="book-link" href="https://www.goodreads.com/book/show/5470.1984" target="_blank">View on Goodreads →</a>
       </div>
-
-      <!-- Factfulness -->
-      <div class="book-card">
-        <img class="book-cover" src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1544963815i/34890015.jpg" alt="Factfulness">
-        <div class="book-content">
-          <div class="book-title">Factfulness</div>
-          <div class="book-author">Hans Rosling</div>
-          <a class="book-link" href="https://www.goodreads.com/book/show/34890015-factfulness" target="_blank">View on Goodreads →</a>
-        </div>
-      </div>
-
-      <!-- Think and Grow Rich -->
-      <div class="book-card">
-        <img class="book-cover" src="https://m.media-amazon.com/images/I/61IxJuRI39L._AC_UF1000,1000_QL80_.jpg" alt="Think and Grow Rich">
-        <div class="book-content">
-          <div class="book-title">Think and Grow Rich</div>
-          <div class="book-author">Napoleon Hill</div>
-          <a class="book-link" href="https://www.goodreads.com/book/show/30186948-think-and-grow-rich" target="_blank">View on Goodreads →</a>
-        </div>
-      </div>
-
-      <!-- Meditations -->
-      <div class="book-card">
-        <img class="book-cover" src="https://images.penguinrandomhouse.com/cover/9780141395869" alt="Meditations">
-        <div class="book-content">
-          <div class="book-title">Meditations</div>
-          <div class="book-author">Marcus Aurelius</div>
-          <a class="book-link" href="https://www.goodreads.com/book/show/30659.Meditations" target="_blank">View on Goodreads →</a>
-        </div>
-      </div>
-
-      <!-- Homo Sapiens -->
-      <div class="book-card">
-        <img class="book-cover" src="https://m.media-amazon.com/images/I/713jIoMO3UL.jpg" alt="Sapiens">
-        <div class="book-content">
-          <div class="book-title">Sapiens</div>
-          <div class="book-author">Yuval Noah Harari</div>
-          <a class="book-link" href="https://www.goodreads.com/book/show/23692271-sapiens" target="_blank">View on Goodreads →</a>
-        </div>
-      </div>
-
-      <!-- The Plague -->
-      <div class="book-card">
-        <img class="book-cover" src="https://dauntbooks.co.uk/wp-content/uploads/2020/03/9780141185132.jpg" alt="The Plague">
-        <div class="book-content">
-          <div class="book-title">The Plague</div>
-          <div class="book-author">Albert Camus</div>
-          <a class="book-link" href="https://www.goodreads.com/book/show/11989.The_Plague" target="_blank">View on Goodreads →</a>
-        </div>
-      </div>
-
-      <!-- The Trial -->
-      <div class="book-card">
-        <img class="book-cover" src="https://m.media-amazon.com/images/I/91kVls2-3bL.jpg" alt="The Trial">
-        <div class="book-content">
-          <div class="book-title">The Trial</div>
-          <div class="book-author">Franz Kafka</div>
-          <a class="book-link" href="https://www.goodreads.com/book/show/17690.The_Trial" target="_blank">View on Goodreads →</a>
-        </div>
-      </div>
-
-      <!-- Black Holes -->
-      <div class="book-card">
-        <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/6/61/BriefAnswersToTheBigQuestions-BookCover.png" alt="Black Hole Book">
-        <div class="book-content">
-          <div class="book-title">What is Inside a Black Hole?</div>
-          <div class="book-author">Stephen Hawking</div>
-          <a class="book-link" href="https://www.goodreads.com/en/book/show/57916525" target="_blank">View on Goodreads →</a>
-        </div>
-      </div>
-
-      <!-- The Idiot -->
-      <div class="book-card">
-        <img class="book-cover" src="https://www.thebookshop.es/productimages/1200/the-idiot---fyodor-dostoyevsky_263328.jpg" alt="The Idiot">
-        <div class="book-content">
-          <div class="book-title">The Idiot</div>
-          <div class="book-author">Fyodor Dostoyevsky</div>
-          <a class="book-link" href="https://www.goodreads.com/book/show/12505.The_Idiot" target="_blank">View on Goodreads →</a>
-        </div>
-      </div>
-
-      <!-- Chess -->
-      <div class="book-card">
-        <img class="book-cover" src="https://images.penguinrandomhouse.com/cover/9780241630822" alt="Chess">
-        <div class="book-content">
-          <div class="book-title">Chess</div>
-          <div class="book-author">Stefan Zweig</div>
-          <a class="book-link" href="https://www.goodreads.com/book/show/14882680-chess" target="_blank">View on Goodreads →</a>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Factfulness -->
+    <div class="book-card">
+      <img class="book-cover" src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1544963815i/34890015.jpg" alt="Factfulness">
+      <div class="book-content">
+        <div class="book-title">Factfulness</div>
+        <div class="book-author">Hans Rosling</div>
+        <a class="book-link" href="https://www.goodreads.com/book/show/34890015-factfulness" target="_blank">View on Goodreads →</a>
+      </div>
+    </div>
+
+    <!-- Think and Grow Rich -->
+    <div class="book-card">
+      <img class="book-cover" src="https://m.media-amazon.com/images/I/61IxJuRI39L._AC_UF1000,1000_QL80_.jpg" alt="Think and Grow Rich">
+      <div class="book-content">
+        <div class="book-title">Think and Grow Rich</div>
+        <div class="book-author">Napoleon Hill</div>
+        <a class="book-link" href="https://www.goodreads.com/book/show/30186948-think-and-grow-rich" target="_blank">View on Goodreads →</a>
+      </div>
+    </div>
+
+    <!-- Meditations -->
+    <div class="book-card">
+      <img class="book-cover" src="https://images.penguinrandomhouse.com/cover/9780141395869" alt="Meditations">
+      <div class="book-content">
+        <div class="book-title">Meditations</div>
+        <div class="book-author">Marcus Aurelius</div>
+        <a class="book-link" href="https://www.goodreads.com/book/show/30659.Meditations" target="_blank">View on Goodreads →</a>
+      </div>
+    </div>
+
+    <!-- Sapiens -->
+    <div class="book-card">
+      <img class="book-cover" src="https://m.media-amazon.com/images/I/713jIoMO3UL.jpg" alt="Sapiens">
+      <div class="book-content">
+        <div class="book-title">Sapiens</div>
+        <div class="book-author">Yuval Noah Harari</div>
+        <a class="book-link" href="https://www.goodreads.com/book/show/23692271-sapiens" target="_blank">View on Goodreads →</a>
+      </div>
+    </div>
+
+    <!-- The Plague -->
+    <div class="book-card">
+      <img class="book-cover" src="https://dauntbooks.co.uk/wp-content/uploads/2020/03/9780141185132.jpg" alt="The Plague">
+      <div class="book-content">
+        <div class="book-title">The Plague</div>
+        <div class="book-author">Albert Camus</div>
+        <a class="book-link" href="https://www.goodreads.com/book/show/11989.The_Plague" target="_blank">View on Goodreads →</a>
+      </div>
+    </div>
+
+    <!-- The Trial -->
+    <div class="book-card">
+      <img class="book-cover" src="https://m.media-amazon.com/images/I/91kVls2-3bL.jpg" alt="The Trial">
+      <div class="book-content">
+        <div class="book-title">The Trial</div>
+        <div class="book-author">Franz Kafka</div>
+        <a class="book-link" href="https://www.goodreads.com/book/show/17690.The_Trial" target="_blank">View on Goodreads →</a>
+      </div>
+    </div>
+
+    <!-- Black Holes -->
+    <div class="book-card">
+      <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/6/61/BriefAnswersToTheBigQuestions-BookCover.png" alt="Black Hole Book">
+      <div class="book-content">
+        <div class="book-title">What is Inside a Black Hole?</div>
+        <div class="book-author">Stephen Hawking</div>
+        <a class="book-link" href="https://www.goodreads.com/en/book/show/57916525" target="_blank">View on Goodreads →</a>
+      </div>
+    </div>
+
+    <!-- The Idiot -->
+    <div class="book-card">
+      <img class="book-cover" src="https://www.thebookshop.es/productimages/1200/the-idiot---fyodor-dostoyevsky_263328.jpg" alt="The Idiot">
+      <div class="book-content">
+        <div class="book-title">The Idiot</div>
+        <div class="book-author">Fyodor Dostoyevsky</div>
+        <a class="book-link" href="https://www.goodreads.com/book/show/12505.The_Idiot" target="_blank">View on Goodreads →</a>
+      </div>
+    </div>
+
+    <!-- Chess -->
+    <div class="book-card">
+      <img class="book-cover" src="https://images.penguinrandomhouse.com/cover/9780241630822" alt="Chess">
+      <div class="book-content">
+        <div class="book-title">Chess</div>
+        <div class="book-author">Stefan Zweig</div>
+        <a class="book-link" href="https://www.goodreads.com/book/show/14882680-chess" target="_blank">View on Goodreads →</a>
+      </div>
+    </div>
+
   </div>
+</div>
 
-    <footer>
-    <div class="container">
-      © 2025 Nikolaos Bermparis — All Rights Reserved.
-    </div>
-  </footer>
+<footer>
+  <div class="container">
+    © 2025 Nikolaos Bermparis — All Rights Reserved.
+  </div>
+</footer>
+
+<!-- Mobile menu JS -->
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks  = document.getElementById("navLinks");
+
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    navToggle.setAttribute("aria-expanded", navLinks.classList.contains("show"));
+  });
+
+  navLinks.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
 
 </body>
 </html>
-
