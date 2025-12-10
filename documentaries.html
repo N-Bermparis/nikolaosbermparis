@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Documentaries | Nikolaos Bermparis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" href="../images/pixel image.png">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-inner">
+
+    <div class="nav-left">
+      <div class="brand">Nikolaos Bermparis</div>
+      <span class="badge">Researcher • Cybersecurity & AI</span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="https://github.com/N-Bermparis" target="_blank">Projects</a></li>
+      <li><a href="index.html#events">Presentations</a></li>
+      <li><a href="index.html#research">Research Topics</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="contact/secure.html">Contact / CV</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- DOCUMENTARIES -->
+<section>
+  <div class="container">
+    <h2>Documentaries</h2>
+    <p class="section-lead">
+      Curated documentaries across cybersecurity, artificial intelligence, and general computing culture.
+    </p>
+
+    <!-- CATEGORY FILTER -->
+    <div class="topics" style="margin-bottom: 36px;">
+      <button class="topic" onclick="filterDocs('all')">All</button>
+      <button class="topic" onclick="filterDocs('cyber')">Cybersecurity</button>
+      <button class="topic" onclick="filterDocs('ai')">Artificial Intelligence</button>
+      <button class="topic" onclick="filterDocs('general')">General / Linux</button>
+    </div>
+
+    <div class="grid cols-3" id="docGrid">
+
+      <!-- ================= CYBERSECURITY ================= -->
+
+      <article class="card" data-category="cyber">
+        <img class="thumbnail" src="https://i.ytimg.com/vi/ia-BtKzx0So/sddefault.jpg">
+        <h3>Rivolta HP</h3>
+        <p>Investigation into HP hacking incidents and underground cyber activity.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=ia-BtKzx0So" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <article class="card" data-category="cyber">
+        <img class="thumbnail" src="https://i.pcmag.com/imagery/articles/058N0ScHokWMrkJi0tA8Mse-3..v1569470741.jpg">
+        <h3>Kingping</h3>
+        <p>Inside the world of cybercrime and underground hacking organizations.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=5bcbmef4I3I&t=461s" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <article class="card" data-category="cyber">
+        <img class="thumbnail" src="https://nsarchive.gwu.edu/sites/default/files/thumbnails/image/untitled-3_0.jpg">
+        <h3>Hackers Testifying</h3>
+        <p>Real hackers testify about cybercrime, investigations, and digital warfare.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=VVJldn_MmMY" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <article class="card" data-category="cyber">
+        <img class="thumbnail" src="https://backiee.com/static/wallpapers/560x315/216398.jpg">
+        <h3>Anonymous - Web Warriors</h3>
+        <p>The rise of Anonymous and the evolution of digital hacktivism.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=Ut6VqRx4gQQ" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <article class="card" data-category="cyber">
+        <img class="thumbnail" src="https://i.ytimg.com/vi/KyYsVeYzbik/maxresdefault.jpg">
+        <h3>The Hacktivist</h3>
+        <p>Political cyber warfare, hacktivist movements, and digital resistance.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=KyYsVeYzbik" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <article class="card" data-category="cyber">
+        <img class="thumbnail" src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9zdGF0aWMvaW1hZ2VzL3dlYnNpdGUvMjAyMy0wOS9wZG1pc2Nwcm9qZWN0MjAtd2szNzA3MjA5OC1pbWFnZS5qcGc.jpg">
+        <h3>Hackers in Wonderland</h3>
+        <p>Deep dive into underground hacking communities and cyber rebellion.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=fe8GsPCpE7E" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <article class="card" data-category="cyber">
+        <img class="thumbnail" src="https://www.csoonline.com/wp-content/uploads/2025/05/573051-0-30713900-1746517168-hand_controls_small_marionette_puppet_control_manipulation_social_engineering_by_spiffyj_gettyimages-1182246224_2400x1600-100858607-orig.jpg?quality=50&strip=all">
+        <h3>Hacking Challenge</h3>
+        <p>Live exploit competitions and cybersecurity challenge battles.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=fHhNWAKw0bY" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <article class="card" data-category="cyber">
+        <img class="thumbnail" src="https://m.media-amazon.com/images/M/MV5BZmViY2ZiY2QtYTliNC00ZjA2LTg0YjAtODFmMzczOGY5MzU3XkEyXkFqcGc@._V1_.jpg">
+        <h3>Cicada 3301</h3>
+        <p>The legendary cryptographic puzzle that recruited elite hackers.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=I2O7blSSzpI&t=258s" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <article class="card" data-category="cyber">
+        <img class="thumbnail" src="https://images.wallpapersden.com/image/download/code-password-hands_Z25mamqUmZqaraWkpJRqa2ZrrWhsaWk.jpg">
+        <h3>How to Get Someone’s Password</h3>
+        <p>Social engineering, phishing, and real-world password attacks explained.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=Qm7k1CPFkIc" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <!-- ================= ARTIFICIAL INTELLIGENCE ================= -->
+
+      <article class="card" data-category="ai">
+        <img class="thumbnail" src="https://i.ytimg.com/vi/WXuK6gekU1Y/sddefault.jpg">
+        <h3>AlphaGo</h3>
+        <p>The historic AI victory that reshaped artificial intelligence forever.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=WXuK6gekU1Y" target="_blank">Watch on YouTube →</a></p>
+      </article>
+       
+      <article class="card" data-category="ai">
+  <img class="thumbnail" src="https://i.ytimg.com/vi/aircAruvnKk/sddefault.jpg">
+  <h3>Neural Networks - 3Blue1Brown</h3>
+  <p>
+    A foundational visual course on neural networks and backpropagation, explaining how modern
+    machine learning models learn through gradient descent and layered representations.
+    One of the most influential educational series in artificial intelligence.
+  </p>
+  <p class="project-link">
+    <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank">
+      Watch Playlist on YouTube →
+    </a>
+  </p>
+</article>
+
+
+      <!-- ================= GENERAL / LINUX ================= -->
+
+      <article class="card" data-category="general">
+        <img class="thumbnail" src="https://nosgustalinux.es/wp-content/uploads/2024/10/Torvalds-1024x576.jpg">
+        <h3>Linux Documentary</h3>
+        <p>The philosophy, engineering, and global movement behind Linux.</p>
+        <p class="project-link"><a href="https://www.youtube.com/watch?v=XMm0HsmOTFI" target="_blank">Watch on YouTube →</a></p>
+      </article>
+
+      <article class="card" data-category="general">
+  <img class="thumbnail" src="https://static.longnow.org/2023/07/HD.3A.053_-10481714045-.jpg">
+  <h3>The Feynman Lectures on Physics</h3>
+  <p>
+    The legendary Caltech lectures by Richard Feynman, covering classical mechanics, electromagnetism,
+    quantum mechanics, and the foundations of physical law. A timeless scientific resource that shaped
+    modern theoretical physics and engineering thinking.
+  </p>
+  <p class="project-link">
+    <a href="https://www.feynmanlectures.caltech.edu/messenger.html" target="_blank">
+      Access the Lectures →
+    </a>
+  </p>
+</article>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    © 2025 Nikolaos Bermparis - All Rights Reserved.
+  </div>
+</footer>
+
+<!-- FILTER SCRIPT -->
+<script>
+  function filterDocs(category) {
+    document.querySelectorAll("#docGrid .card").forEach(card => {
+      if (category === "all" || card.dataset.category === category) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
+
+<!-- MOBILE NAV -->
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks  = document.getElementById("navLinks");
+
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    navToggle.setAttribute("aria-expanded", navLinks.classList.contains("show"));
+  });
+
+  navLinks.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
+
+</body>
+</html>
