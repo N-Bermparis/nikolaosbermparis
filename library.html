@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Library | Nikolaos Bermparis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" href="images/pixel image.png">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ===== UNIX TREE STYLE ===== */
+    .tree-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #eef2f6;
+      border-radius: 12px;
+      padding: 32px;
+      font-family: monospace;
+      font-size: 15px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.06);
+    }
+
+    .tree-title {
+      font-family: 'Crimson Pro', serif;
+      margin-bottom: 18px;
+      font-size: 1.8rem;
+      color: #0f172a;
+    }
+
+    .tree {
+      white-space: pre;
+      line-height: 1.7;
+    }
+
+    .tree a {
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .tree a:hover {
+      text-decoration: underline;
+    }
+
+    .tree .folder {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .tree .file {
+      color: #334155;
+    }
+
+    .tree .comment {
+      color: #64748b;
+      font-style: italic;
+      margin-left: 8px;
+    }
+
+    /* ✅ Centered Tree Image */
+    .library-tree-image {
+      display: block;
+      margin: 22px auto 24px auto;
+      max-width: 180px;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+      /* =========================
+       ✅ MOBILE DYNAMIC MODE
+       ========================= */
+    @media (max-width: 768px) {
+
+      .tree-container {
+        font-size: 16px;
+        padding: 24px;
+      }
+
+      /* Hide ASCII Tree */
+      .tree {
+        white-space: normal;
+      }
+
+      /* Reformat into mobile list */
+      .tree span.folder,
+      .tree .comment {
+        display: none;
+      }
+
+      .tree a.file {
+        display: block;
+        padding: 14px 16px;
+        margin: 10px 0;
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        font-size: 1.05rem;
+        text-align: center;
+      }
+
+      .tree a.file:hover {
+        background: #eef2ff;
+      }
+
+      /* Remove ASCII structure */
+      .tree {
+        content: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-inner">
+
+    <div class="nav-left">
+      <div class="brand">Nikolaos Bermparis</div>
+      <span class="badge">Researcher • Cybersecurity & AI</span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="https://github.com/N-Bermparis" target="_blank">Projects</a></li>
+      <li><a href="index.html#events">Presentations</a></li>
+      <li><a href="index.html#research">Research Topics</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="contact/secure.html">Contact / CV</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- UNIX TREE LIBRARY -->
+<section>
+  <div class="container">
+    <h2>Knowledge Library</h2>
+    <img src="images/tree.png" alt="Library Tree" class="library-tree-image">
+    <p class="section-lead">
+      A structured index of books, documentaries, and technical resources - organized as a UNIX-style tree.
+    </p>
+
+    <div class="tree-container">
+      <div class="tree-title">/home/nikolaos/library</div>
+
+<div class="tree">
+<span class="folder">library/</span>
+├── <a href="art/books.html" class="file">books.html</a>
+│   <span class="comment"># Technical & philosophical books</span>
+│
+├── <a href="documentaries.html" class="file">documentaries.html</a>
+│   <span class="comment"># Cybersecurity, AI, Linux, Hacktivism</span>
+│
+└── <a href="resources.html" class="file">resources.html</a>
+    <span class="comment"># Tools, datasets, standards, lectures</span>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    © 2025 Nikolaos Bermparis - All Rights Reserved.
+  </div>
+</footer>
+
+<!-- MOBILE NAV -->
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks  = document.getElementById("navLinks");
+
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    navToggle.setAttribute("aria-expanded", navLinks.classList.contains("show"));
+  });
+
+  navLinks.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
+
+</body>
+</html>
