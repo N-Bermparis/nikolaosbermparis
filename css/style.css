@@ -489,3 +489,9 @@ footer {
 .project-link a:hover {
   text-decoration: none;
 }
+
+@media (max-width: 900px) {
+  .badge {
+    display: none;
+  }
+}
