@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>When Watch Dogs Stops Feeling Fictional: Chat Control, Encryption and Digital Trust</title>
+    <meta
+        name="description"
+        content="An analysis of the EU's 2026 ePrivacy derogation, voluntary scanning of private communications, end-to-end encryption and the surveillance architecture imagined by Watch Dogs."
+    >
+
+    <link rel="icon" type="image/x-icon" href="images/pixel image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .hero {
+            background: transparent;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            max-width: 760px;
+            margin: 0 auto 12px;
+            color: #555;
+            font-size: 1.35rem;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .meta-info {
+            margin-bottom: 40px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .scientific-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .scientific-content p {
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+            line-height: 1.75;
+            text-align: justify;
+        }
+
+        .scientific-content h2 {
+            margin-top: 50px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            font-size: 1.8rem;
+            text-align: left;
+        }
+
+        .scientific-content h3 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 1.4rem;
+        }
+
+        .scientific-content ul {
+            margin: 0 0 28px 24px;
+            font-size: 1.08rem;
+            line-height: 1.7;
+        }
+
+        .scientific-content li {
+            margin-bottom: 10px;
+        }
+
+        figure {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+            line-height: 1.45;
+        }
+
+        figcaption a {
+            color: #0f172a;
+        }
+
+        .fixed-size-img {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            height: 390px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .contain-img {
+            object-fit: contain;
+            background: #f4f4f4;
+        }
+
+        .status-box,
+        .analysis-box,
+        .warning-box {
+            margin: 32px 0;
+            padding: 22px 24px;
+            border-left: 4px solid #1e293b;
+            background: #f8fafc;
+        }
+
+        .warning-box {
+            border-left-color: #8b5e00;
+            background: #fffaf0;
+        }
+
+        .status-box h3,
+        .analysis-box h3,
+        .warning-box h3 {
+            margin: 0 0 10px;
+            font-size: 1.25rem;
+        }
+
+        .status-box p,
+        .analysis-box p,
+        .warning-box p {
+            margin-bottom: 0;
+            font-size: 1.04rem;
+            text-align: left;
+        }
+
+        .comparison-table {
+            width: 100%;
+            margin: 32px 0;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 14px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .comparison-table th {
+            background: #f3f4f6;
+        }
+
+        .timeline {
+            margin: 30px 0;
+            padding-left: 22px;
+            border-left: 2px solid #cbd5e1;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 24px;
+            padding-left: 18px;
+        }
+
+        .timeline-item::before {
+            position: absolute;
+            top: 7px;
+            left: -29px;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            background: #1e293b;
+            box-shadow: 0 0 0 1px #1e293b;
+            content: "";
+        }
+
+        .timeline-date {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .reference-list {
+            padding-left: 22px;
+            font-size: 0.98rem;
+            line-height: 1.65;
+        }
+
+        .reference-list li {
+            margin-bottom: 12px;
+        }
+
+        .reference-list a {
+            overflow-wrap: anywhere;
+            color: #0f172a;
+        }
+
+        .image-note {
+            margin-top: 50px;
+            padding: 18px 20px;
+            border: 1px solid #e5e7eb;
+            background: #fafafa;
+            color: #555;
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        @media (max-width: 720px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.15rem;
+            }
+
+            .scientific-content p {
+                text-align: left;
+            }
+
+            .fixed-size-img {
+                height: 280px;
+            }
+
+            .comparison-table {
+                font-size: 0.92rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container nav-inner">
+
+        <div class="nav-left">
+            <div class="brand">Nikolaos Bermparis</div>
+            <span class="badge">Researcher • Cybersecurity &amp; PQC</span>
+        </div>
+
+        <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">Home</a></li>
+            <li>
+                <a
+                    href="https://github.com/N-Bermparis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Projects</a>
+            </li>
+            <li><a href="index.html#events">Presentations</a></li>
+            <li><a href="index.html#research">Research Topics</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="contact/secure.html">Contact / CV</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<main class="container">
+
+    <header class="hero">
+        <h1>When Watch Dogs Stops Feeling Fictional</h1>
+        <h2>Chat Control, end-to-end encryption and the architecture of digital trust in Europe</h2>
+
+        <div class="meta-info">
+            By Nikolaos Bermparis &nbsp;|&nbsp; Privacy, Cybersecurity &amp; Digital Policy
+            &nbsp;|&nbsp; July 2026
+        </div>
+    </header>
+
+    <article class="scientific-content">
+
+        <p>
+            <strong>Abstract.</strong>
+            In <em>Watch Dogs</em>, the fictional Central Operating System—ctOS—connects
+            infrastructure, communications and personal information through a system presented
+            as efficient, protective and convenient. Its danger does not come from a single
+            malicious feature. It comes from the concentration of visibility and control.
+            The European debate commonly described as “Chat Control” is not ctOS, and treating
+            the two as equivalent would be inaccurate. Yet the comparison is useful because both
+            raise the same architectural question: what happens when private life becomes
+            technically inspectable by default?
+        </p>
+
+        <figure>
+            <img
+                src="images/chat-control-european-parliament.jpg"
+                alt="European Parliament chamber used to illustrate the Chat Control debate"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 1: The 2026 debate concerns a temporary ePrivacy derogation permitting
+                voluntary detection of online child sexual abuse.
+                Image source:
+                <a
+                    href="https://media.wired.com/photos/6a4ea8598a37b44461cc7389/master/w_2240,c_limit/Politics_EuropeanParliamentsaysyestochat%20controlbill_v4.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >WIRED</a>.
+            </figcaption>
+        </figure>
+
+        <div class="status-box">
+            <h3>Legislative status — 22 July 2026</h3>
+            <p>
+                The European Parliament adopted amendments to the Council’s position on
+                9 July 2026. The amended position was then returned to the Council, which has
+                three months to accept or reject the changes. The measure should therefore be
+                described as an ongoing legislative process rather than a fully settled final law.
+            </p>
+        </div>
+
+
+        <h2>1. What Actually Happened?</h2>
+
+        <p>
+            The official proposal is not titled “Chat Control.” That name is used mainly by
+            critics, journalists and digital-rights campaigners. The legal instrument concerns a
+            temporary derogation from parts of the ePrivacy framework. Its purpose is to allow
+            providers of certain messaging, webmail and internet communication services to use
+            technologies voluntarily to detect, report and remove online child sexual abuse
+            material and to identify possible solicitation of children.
+        </p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-date">3 April 2026</span>
+                The previous temporary derogation expired after legislators failed to agree on
+                an extension before the deadline.
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">2 July 2026</span>
+                The Council adopted a first-reading position intended to reinstate the temporary
+                framework until 3 April 2028.
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">9 July 2026</span>
+                Parliament amended the Council position. Among the most important changes was an
+                explicit attempt to exclude communications protected, previously protected or
+                intended to be protected by end-to-end encryption.
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">Next step</span>
+                The Council must decide whether to approve Parliament’s amendments. If it does
+                not accept all of them, the institutions may enter conciliation.
+            </div>
+        </div>
+
+        <p>
+            The unusual political result attracted attention because 314 Members of the European
+            Parliament voted to reject the Council position, while 276 voted against rejection
+            and 17 abstained. Rejection at second reading required an absolute majority, which
+            was not reached. Parliament instead completed its second reading with an amended
+            position.
+        </p>
+
+
+        <h2>2. What the Council Text Would Permit</h2>
+
+        <p>
+            The Council text would create a narrow legal exception to the confidentiality rules
+            in Articles 5 and 6 of the ePrivacy Directive. It would not order every provider to
+            scan every conversation. Rather, providers choosing to perform detection could rely
+            on the derogation only when the processing satisfied a series of necessity,
+            proportionality, data-protection and oversight conditions.
+        </p>
+
+        <p>The document discusses several categories of detection technology:</p>
+
+        <ul>
+            <li>
+                <strong>Hash matching:</strong> comparing images or videos against digital
+                signatures derived from previously verified illegal material.
+            </li>
+            <li>
+                <strong>Image and video classifiers:</strong> estimating whether previously
+                unknown material may fall within a prohibited category.
+            </li>
+            <li>
+                <strong>Text or traffic analysis:</strong> identifying patterns that may indicate
+                the solicitation or grooming of a child.
+            </li>
+        </ul>
+
+        <p>
+            The text also says the selected technologies should be the least privacy-intrusive
+            available, that processing should be limited to what is strictly necessary and that
+            providers should reduce and report false positives. Audio communications are outside
+            the scope of the Council text.
+        </p>
+
+        <figure>
+            <img
+                src="images/ctos-map.jpg"
+                alt="Map of the fictional ctOS network from Watch Dogs"
+                class="fixed-size-img contain-img"
+            >
+            <figcaption>
+                Figure 2: ctOS visualises the risk of treating a network as a single layer of
+                observation and control. The EU measure is legally and technically different,
+                but the architectural metaphor remains useful.
+                Image source:
+                <a
+                    href="https://static.wikia.nocookie.net/watchdogscombined/images/6/66/CtOS_Map.jpg/revision/latest?cb=20140416165607"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Watch Dogs Wiki</a>.
+            </figcaption>
+        </figure>
+
+
+        <h2>3. What the Measure Is Not</h2>
+
+        <p>
+            The public debate often collapses several different proposals into a single phrase.
+            This creates the impression that the July vote introduced a universal, mandatory
+            system capable of reading every encrypted conversation in Europe. That is not an
+            accurate description of the text considered in July 2026.
+        </p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Claim</th>
+                    <th>More accurate description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>“The EU created a central government inbox.”</td>
+                    <td>
+                        The temporary framework concerns voluntary processing performed by
+                        service providers under legal conditions and supervisory oversight.
+                    </td>
+                </tr>
+                <tr>
+                    <td>“Every message must be scanned.”</td>
+                    <td>
+                        The Council text permits qualifying voluntary detection; it does not
+                        impose a universal scanning obligation through this instrument.
+                    </td>
+                </tr>
+                <tr>
+                    <td>“Encryption has already been banned.”</td>
+                    <td>
+                        The Council text states that it should not prohibit or weaken end-to-end
+                        encryption, while Parliament sought a stronger operative exclusion for
+                        encrypted communications.
+                    </td>
+                </tr>
+                <tr>
+                    <td>“The permanent Chat Control law is finished.”</td>
+                    <td>
+                        The July measure is temporary and separate from the longer-term EU
+                        framework, which remains under negotiation.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <h3>Terminology matters</h3>
+            <p>
+                “Chat Control” can refer to the temporary ePrivacy derogation, the separate
+                permanent child sexual abuse regulation proposed in 2022, or the broader
+                political dispute over message scanning. These are connected debates, but they
+                are not the same legislative text.
+            </p>
+        </div>
+
+
+        <h2>4. The Encryption Question</h2>
+
+        <p>
+            End-to-end encryption is designed so that plaintext is available only at the
+            communicating endpoints. The provider transports encrypted data but does not
+            ordinarily possess the keys required to inspect the conversation. This architecture
+            protects ordinary citizens, businesses, journalists, lawyers, public authorities and
+            victims seeking confidential help.
+        </p>
+
+        <p>
+            The Council position recognises that weakening encryption could create opportunities
+            for malicious third parties and says that the regulation should not be interpreted as
+            prohibiting or weakening end-to-end encryption. However, there is a meaningful legal
+            distinction between protecting encryption in a recital and excluding encrypted
+            communications directly from the operative scope. Parliament’s July amendments sought
+            to make that exclusion explicit.
+        </p>
+
+        <div class="analysis-box">
+            <h3>The core technical tension</h3>
+            <p>
+                A provider cannot inspect end-to-end encrypted plaintext in the middle of the
+                network without changing the security model. Inspection must occur before
+                encryption, after decryption, or through a separate reporting mechanism. That is
+                why proposals involving client-side scanning generate such intense debate: they
+                may preserve encryption in transit while changing what the endpoint is allowed to
+                do before a message is protected.
+            </p>
+        </div>
+
+
+        <h2>5. Why Watch Dogs Is a Useful Metaphor</h2>
+
+        <figure>
+            <img
+                src="images/watch-dogs-ctos.jpg"
+                alt="Watch Dogs artwork showing a connected and surveilled city"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 3: In <em>Watch Dogs</em>, ctOS links city infrastructure and personal
+                information through a centrally visible digital layer.
+                Image source:
+                <a
+                    href="https://img.goodfon.com/original/2560x1600/b/39/watch-dogs-storozhevye-psy-7516.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >GoodFon</a>.
+            </figcaption>
+        </figure>
+
+        <p>
+            Ubisoft’s ctOS is a fictional city operating system that connects infrastructure,
+            devices and information about residents. The system is initially justified through
+            promises of safety and efficiency. Its real danger appears when access expands,
+            private data becomes actionable and the same infrastructure can be repurposed by
+            corporations, governments or attackers.
+        </p>
+
+        <p>
+            The comparison with European communications policy should remain disciplined. The EU
+            is not deploying a citywide operating system, and the temporary derogation is not a
+            central database operated like ctOS. The analogy instead concerns
+            <strong>capability accumulation</strong>. Once a technical and legal capability for
+            routine inspection exists, the long-term question is not only who uses it today, but
+            who may use it tomorrow, for what purpose and with what degree of oversight.
+        </p>
+
+        <p>
+            Surveillance systems rarely arrive under the label “surveillance.” They are usually
+            introduced as fraud prevention, public safety, content moderation, convenience or
+            administrative efficiency. Those objectives may be legitimate. The risk emerges when
+            exceptional access becomes ordinary infrastructure and when users cannot verify how
+            the system classifies, reports or retains their communications.
+        </p>
+
+
+        <h2>6. False Positives Are Not Merely Statistical</h2>
+
+        <p>
+            Detection at scale is often described in terms of accuracy percentages. Yet even a
+            small error rate can produce a significant number of incorrect flags when applied to
+            millions or billions of communications. The impact is not limited to an inconvenient
+            alert. A false match may involve the exposure of intimate material, account
+            restrictions, reporting to authorities or the need to challenge an automated
+            decision.
+        </p>
+
+        <p>
+            Hash matching against verified known material is conceptually narrower than using a
+            classifier to evaluate previously unseen images or text. Grooming detection is even
+            more context-dependent because ordinary conversations can contain age references,
+            emotional language, sexual-health discussions, jokes or safeguarding conversations.
+            The more a model attempts to infer intent, the greater the importance of context,
+            human review, appeal mechanisms and measurable error reporting.
+        </p>
+
+        <p>
+            The Council text acknowledges this problem by requiring providers to minimise false
+            positives, establish complaint mechanisms and report error rates. These safeguards
+            matter, but they do not eliminate the architectural question: whether confidential
+            communications should be routinely processed for suspicion indicators in the first
+            place.
+        </p>
+
+
+        <h2>7. Safeguards, Oversight and Remaining Risks</h2>
+
+        <p>
+            The proposed safeguards include data-protection impact assessments, consultation with
+            supervisory authorities, limits on retention, transparency reports, complaint
+            mechanisms and judicial remedies. Providers would also need to report the kinds and
+            volumes of data processed, detected cases, complaints, false-positive rates,
+            retention policies and the organisations receiving reports.
+        </p>
+
+        <p>
+            These requirements are substantial, but governance cannot be evaluated only by
+            counting safeguards. Their effectiveness depends on implementation: whether
+            supervisory authorities have sufficient technical expertise, whether reports are
+            detailed enough for external scrutiny, whether users are informed when mistakes
+            occur, and whether remedies are available before irreversible harm is caused.
+        </p>
+
+        <figure>
+            <img
+                src="images/ctos-towers.jpg"
+                alt="ctOS tower from Watch Dogs representing centralised network control"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 4: The ctOS tower is a visual metaphor for concentrated access. In real
+                systems, trust must be distributed through technical boundaries, independent
+                oversight and verifiable controls.
+                Image source:
+                <a
+                    href="https://www.digitaltrends.com/tachyon/2014/05/Watch-Dogs-ctOS-Towers.jpg?fit=1500%2C1000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Digital Trends</a>.
+            </figcaption>
+        </figure>
+
+
+        <h2>8. The Real Question: What Architecture Do We Normalise?</h2>
+
+        <p>
+            Protecting children from sexual abuse is a legitimate and urgent public objective.
+            Protecting the confidentiality and security of communications is also essential.
+            Presenting these goals as mutually exclusive leads to poor policy and weaker
+            technology. The challenge is to target offenders and support victims without turning
+            every user into a continuously inspected subject.
+        </p>
+
+        <p>
+            A proportionate system should favour narrow detection of already verified illegal
+            material, strong judicial and supervisory controls, transparency, independent
+            auditing, effective remedies and designs that do not undermine encryption. It should
+            also invest in measures beyond scanning: specialist law-enforcement capacity, faster
+            responses to victim reports, platform safety engineering, prevention, education and
+            international cooperation.
+        </p>
+
+        <p>
+            The lesson of <em>Watch Dogs</em> is not that all connected technology inevitably
+            becomes oppressive. It is that architecture creates power. A system designed for
+            universal visibility will eventually invite broader uses, while a system designed
+            around minimisation, compartmentalisation and encryption makes misuse more difficult.
+        </p>
+
+
+        <h2>9. Conclusion</h2>
+
+        <p>
+            Europe’s 2026 ePrivacy debate is neither the arrival of ctOS nor an insignificant
+            technical amendment. It is a dispute about the boundary between private
+            communications and provider-side detection, and about the conditions under which an
+            exception can become infrastructure.
+        </p>
+
+        <p>
+            The most important question is not whether society should protect children—it must.
+            The question is whether that protection is built through targeted, accountable and
+            technically defensible measures, or through a general capability to inspect private
+            life. Fiction becomes useful when it helps us recognise architectural risks before
+            they become ordinary. In that sense, <em>Watch Dogs</em> remains less a prediction
+            than a warning about where concentrated visibility can lead.
+        </p>
+
+
+        <div class="image-note">
+            <strong>Image note:</strong>
+            This page uses local image paths rather than third-party hotlinks. Save the selected
+            images in your website’s <code>images</code> directory using the filenames shown in
+            the HTML. Check the copyright and reuse terms of each image before publication; a
+            source link in a caption does not itself grant permission.
+        </div>
+
+
+        <section
+            aria-labelledby="references-heading"
+            style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee;"
+        >
+            <h2 id="references-heading" style="margin-top: 0;">References</h2>
+
+            <ol class="reference-list">
+                <li>
+                    Council of the European Union.
+                    “Council moves to reinstate interim measure to combat child sexual abuse
+                    online,” 2 July 2026.
+                    <a
+                        href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/02/council-moves-to-reinstate-interim-measure-to-combat-child-sexual-abuse-online/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Council press release</a>.
+                </li>
+
+                <li>
+                    European Parliament.
+                    “Combating child sexual abuse online: support for more limited ePrivacy
+                    derogation,” 9 July 2026.
+                    <a
+                        href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >European Parliament press release</a>.
+                </li>
+
+                <li>
+                    Council of the European Union.
+                    “Position of the Council at first reading,” document
+                    ST 11261/1/26 REV 1, 2 July 2026.
+                    <a
+                        href="https://data.consilium.europa.eu/doc/document/ST-11261-2026-REV-1/en/pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Official PDF</a>.
+                </li>
+
+                <li>
+                    Isabella Ward.
+                    “A Majority of European Lawmakers Voted Against Letting Big Tech Read Our
+                    Messages. They’re Going to Anyway.” <em>WIRED</em>, 9 July 2026.
+                    <a
+                        href="https://www.wired.com/story/a-majority-of-european-lawmakers-voted-against-letting-big-tech-read-our-messages-theyre-going-to-anyway/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >WIRED analysis</a>.
+                </li>
+
+                <li>
+                    Ubisoft.
+                    “Watch Dogs 2 Reveal—What You Need to Know About the ctOS Bay Area
+                    Invasion.”
+                    <a
+                        href="https://news.ubisoft.com/en-us/article/2lxgl1Nhk2dRAs8VYCx5OL/watch-dogs-2-reveal-heres-what-you-need-to-know-about-ctos-bay-area-invasion"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Ubisoft News</a>.
+                </li>
+            </ol>
+        </section>
+
+    </article>
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 Nikolaos Bermparis — All Rights Reserved.
+    </div>
+</footer>
+
+<script>
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("show");
+            navToggle.classList.toggle("open", isOpen);
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("show");
+                navToggle.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

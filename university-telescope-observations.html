@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Through the University Telescope: The Moon, Saturn and a Probable Jupiter</title>
+    <meta
+        name="description"
+        content="A personal observing report examining telescope photographs of the Moon, Saturn and a probable view of Jupiter with candidate Galilean moons."
+    >
+
+    <link rel="icon" type="image/x-icon" href="images/pixel image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .hero {
+            background: transparent;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+            font-size: 2.8rem;
+        }
+
+        .hero h2 {
+            max-width: 760px;
+            margin: 0 auto 12px;
+            color: #555;
+            font-size: 1.35rem;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .meta-info {
+            margin-bottom: 40px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .scientific-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .scientific-content p {
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+            line-height: 1.75;
+            text-align: justify;
+        }
+
+        .scientific-content h2 {
+            margin-top: 50px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            font-size: 1.8rem;
+            text-align: left;
+        }
+
+        .scientific-content h3 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 1.4rem;
+        }
+
+        .scientific-content ul {
+            margin: 0 0 28px 24px;
+            font-size: 1.08rem;
+            line-height: 1.7;
+        }
+
+        .scientific-content li {
+            margin-bottom: 10px;
+        }
+
+        figure {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+            line-height: 1.45;
+        }
+
+        .fixed-size-img {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            max-height: 620px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #050505;
+            object-fit: contain;
+        }
+
+        .observation-box,
+        .confidence-box,
+        .technical-box {
+            margin: 32px 0;
+            padding: 22px 24px;
+            border-left: 4px solid #1e293b;
+            background: #f8fafc;
+        }
+
+        .confidence-box {
+            border-left-color: #8b5e00;
+            background: #fffaf0;
+        }
+
+        .observation-box h3,
+        .confidence-box h3,
+        .technical-box h3 {
+            margin: 0 0 10px;
+            font-size: 1.25rem;
+        }
+
+        .observation-box p,
+        .confidence-box p,
+        .technical-box p {
+            margin-bottom: 0;
+            font-size: 1.04rem;
+            text-align: left;
+        }
+
+        .identification-table {
+            width: 100%;
+            margin: 32px 0;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+
+        .identification-table th,
+        .identification-table td {
+            padding: 14px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .identification-table th {
+            background: #f3f4f6;
+        }
+
+        .reference-list {
+            padding-left: 22px;
+            font-size: 0.98rem;
+            line-height: 1.65;
+        }
+
+        .reference-list li {
+            margin-bottom: 12px;
+        }
+
+        .reference-list a {
+            color: #0f172a;
+            overflow-wrap: anywhere;
+        }
+
+        code {
+            font-size: 0.92em;
+        }
+
+        @media (max-width: 720px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.15rem;
+            }
+
+            .scientific-content p {
+                text-align: left;
+            }
+
+            .identification-table {
+                font-size: 0.92rem;
+            }
+
+            .identification-table th,
+            .identification-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container nav-inner">
+
+        <div class="nav-left">
+            <div class="brand">Nikolaos Bermparis</div>
+            <span class="badge">Researcher • Cybersecurity &amp; PQC</span>
+        </div>
+
+        <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">Home</a></li>
+            <li>
+                <a
+                    href="https://github.com/N-Bermparis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Projects</a>
+            </li>
+            <li><a href="index.html#events">Presentations</a></li>
+            <li><a href="index.html#research">Research Topics</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="contact/secure.html">Contact / CV</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<main class="container">
+
+    <header class="hero">
+        <h1>Through the University Telescope</h1>
+        <h2>The Moon, Saturn and a probable view of Jupiter through a small set of personal observations</h2>
+
+        <div class="meta-info">
+            By Nikolaos Bermparis &nbsp;|&nbsp; Observational Astronomy
+            &nbsp;|&nbsp; 2026
+        </div>
+    </header>
+
+    <article class="scientific-content">
+
+        <p>
+            <strong>Abstract.</strong>
+            A telescope does more than enlarge a distant object. It turns points of light into
+            physical places: a cratered surface, a ring system and a planet surrounded by moving
+            worlds of its own. This observing report examines seven photographs taken through a
+            university telescope. The image set contains two views of the Moon, four frames that
+            clearly show Saturn’s characteristic ringed silhouette and one probable observation
+            of Jupiter with point-like objects that may be Galilean moons.
+        </p>
+
+        <figure>
+            <img
+                src="images/observation-contact-sheet.jpg"
+                alt="Contact sheet showing the Moon, Saturn and a probable view of Jupiter"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 1: Three targets represented in the observation set. All photographs and
+                processed versions are by Nikolaos Bermparis.
+            </figcaption>
+        </figure>
+
+        <div class="confidence-box">
+            <h3>Identification and metadata note</h3>
+            <p>
+                The supplied JPEG files contain no usable EXIF timestamp, observing coordinates,
+                telescope model, eyepiece information or camera settings. The Moon and Saturn
+                identifications are secure from morphology. The final object is most consistent
+                with Jupiter, but its exact identity—and the names of the nearby point
+                sources—cannot be proven from the photographs alone.
+            </p>
+        </div>
+
+
+        <h2>1. Reading an Image Taken Through an Eyepiece</h2>
+
+        <p>
+            The circular field, dark vignetting, changing orientation and uneven illumination
+            indicate that the camera was positioned at or near the telescope eyepiece. This is
+            commonly called afocal or eyepiece-projection smartphone photography. NASA notes that
+            a phone can capture the Moon and planets simply by being aligned with a telescope
+            eyepiece, although a stable adapter makes alignment and focusing much easier.
+        </p>
+
+        <p>
+            These images also preserve the practical character of visual astronomy. The frame is
+            not a spacecraft mosaic or a heavily stacked planetary portrait. It records what an
+            observer actually encounters: a narrow exit pupil, atmospheric movement, difficult
+            focus and an enormous contrast difference between a bright planet and the black sky.
+        </p>
+
+        <table class="identification-table">
+            <thead>
+                <tr>
+                    <th>Files</th>
+                    <th>Identification</th>
+                    <th>Confidence</th>
+                    <th>Visual evidence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>image00002</code>, <code>image00003</code></td>
+                    <td>The Moon</td>
+                    <td>Confirmed</td>
+                    <td>Resolved lunar disc, craters, bright ray structures and rugged relief.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>image00001</code>, <code>image00004</code>,
+                        <code>image00005</code>, <code>image00006</code>
+                    </td>
+                    <td>Saturn</td>
+                    <td>High</td>
+                    <td>An extended ring plane is visible on both sides of the planetary disc.</td>
+                </tr>
+                <tr>
+                    <td><code>image00007</code></td>
+                    <td>Probable Jupiter</td>
+                    <td>Moderate</td>
+                    <td>
+                        A very bright planetary source with two nearby point sources arranged
+                        along a common line, consistent with a telescopic Jovian view.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h2>2. The Moon: Light, Shadow and Geological Relief</h2>
+
+        <figure>
+            <img
+                src="images/moon-terminator.jpg"
+                alt="Photograph of the Moon through the university telescope"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 2: The Moon photographed through the telescope. The image shows the
+                challenge of retaining surface detail while photographing a very bright target.
+            </figcaption>
+        </figure>
+
+        <p>
+            The Moon is the most detailed object in the set because it is both close and
+            physically large in the sky. The photographs resolve crater rims, irregular terrain
+            and broad tonal differences across the surface. The rough boundary between strongly
+            illuminated terrain and darkness is especially valuable. Near this boundary—the
+            terminator—the Sun lies low over the local lunar horizon, allowing crater walls and
+            mountain ridges to cast long shadows.
+        </p>
+
+        <p>
+            NASA recommends concentrating on the terminator because shadows make relief easier to
+            distinguish. The same effect is visible here: structures near the illuminated edge
+            appear sharper and more three-dimensional than regions under nearly overhead
+            sunlight.
+        </p>
+
+        <figure>
+            <img
+                src="images/moon-annotated.jpg"
+                alt="Annotated telescope photograph marking the lunar terminator and a probable Tycho ray system"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 3: Annotated interpretation. The bright radial structure is consistent
+                with the ray system associated with Tycho, but the label remains provisional
+                because the telescope orientation and observation time were not preserved.
+            </figcaption>
+        </figure>
+
+        <p>
+            One frame contains a prominent bright ray pattern. Its morphology and position within
+            the visible lunar terrain are consistent with Tycho, one of the Moon’s best-known
+            young impact craters. NASA describes Tycho as a bright feature in the southern
+            highlands whose ejecta rays stretch across a large part of the lunar near side.
+            Telescope inversion and phone rotation can move such a feature to an unfamiliar part
+            of the frame, which is why a raw eyepiece photograph should not be interpreted using
+            “up” and “down” alone.
+        </p>
+
+
+        <h2>3. Saturn: A Ring System Resolved from Earth</h2>
+
+        <figure>
+            <img
+                src="images/saturn-wide.jpg"
+                alt="Saturn photographed through a university telescope"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 4: Saturn appears small in the full camera frame, yet its ringed silhouette
+                is already recognisable.
+            </figcaption>
+        </figure>
+
+        <p>
+            Saturn is the clearest planetary identification in the archive. Even at modest image
+            scale, the object is not circular: material extends to both sides of the brighter
+            central disc. These extensions are the two visible ends, or ansae, of the ring system.
+            The sequence of four Saturn frames also shows how much a telescopic planetary image
+            can change from one moment to the next.
+        </p>
+
+        <figure>
+            <img
+                src="images/saturn-annotated.jpg"
+                alt="Enlarged and annotated crop of Saturn showing the planetary disc and ring plane"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 5: Enlarged annotated crop. The source is small and partly saturated, so
+                the image records the overall geometry rather than individual ring divisions.
+            </figcaption>
+        </figure>
+
+        <p>
+            Saturn’s rings are physically thin but extremely broad. From Earth, their apparent
+            opening changes as the viewing geometry changes. In these photographs the ring plane
+            is visible as a narrow, bright extension across the planet. Individual structures
+            such as the Cassini Division are not reliably resolved, but the defining planetary
+            architecture is unmistakable.
+        </p>
+
+        <div class="technical-box">
+            <h3>Why the Saturn frames look different</h3>
+            <p>
+                Atmospheric seeing, small changes in focus, hand movement, phone-to-eyepiece
+                alignment and automatic exposure can alter the apparent shape within seconds.
+                Recording a short video and combining the sharpest frames would preserve more
+                detail than relying on a single handheld exposure.
+            </p>
+        </div>
+
+
+        <h2>4. A Probable View of Jupiter and Its Moons</h2>
+
+        <figure>
+            <img
+                src="images/probable-jupiter-and-moons.jpg"
+                alt="Probable photograph of Jupiter with nearby point sources"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 6: A bright, saturated planetary source accompanied by nearby point-like
+                objects. The red spot to the right is consistent with an internal reflection.
+            </figcaption>
+        </figure>
+
+        <p>
+            The last photograph contains the most interesting uncertainty. The central object is
+            strongly overexposed, erasing any atmospheric bands or disc detail that could provide
+            a direct identification. Two small white points remain visible below it and lie close
+            to a common axis through the planet. This geometry is consistent with Jupiter and a
+            subset of its four bright Galilean moons.
+        </p>
+
+        <p>
+            Galileo famously recognised that several “stars” near Jupiter changed position and
+            were actually moons orbiting the planet. Modern small telescopes reproduce this
+            historic observation easily. NASA identifies the four largest Jovian satellites as
+            Io, Europa, Ganymede and Callisto. However, assigning those names to the individual
+            points in this image would require the exact date, time, observing location, image
+            orientation and preferably an ephemeris comparison.
+        </p>
+
+        <figure>
+            <img
+                src="images/probable-jupiter-annotated.jpg"
+                alt="Annotated probable photograph of Jupiter and candidate Galilean moons"
+                class="fixed-size-img"
+            >
+            <figcaption>
+                Figure 7: Cautious annotated interpretation. The planetary identification is
+                probable, the white points are candidate moons, and the displaced reddish spot is
+                treated as an optical artifact rather than a celestial object.
+            </figcaption>
+        </figure>
+
+
+        <h2>5. What the Camera Adds—and What It Hides</h2>
+
+        <p>
+            A visual observer can continuously adjust their eye to brightness and wait for brief
+            moments of stable atmosphere. A phone camera makes a different set of decisions. It
+            may raise exposure to reveal the dark field, saturating the planet in the process. It
+            may hunt for focus, apply sharpening and noise reduction, or introduce coloured
+            fringes around a bright edge. The result is not simply “what the telescope saw”; it
+            is the combined output of the atmosphere, telescope, eyepiece, alignment, sensor and
+            computational image pipeline.
+        </p>
+
+        <p>
+            Several artifacts are visible in the archive:
+        </p>
+
+        <ul>
+            <li>
+                <strong>Vignetting:</strong> dark regions caused by the phone lens not being
+                perfectly centred over the eyepiece’s exit pupil.
+            </li>
+            <li>
+                <strong>Saturation:</strong> loss of detail in the brightest lunar and planetary
+                regions because pixel values reached their maximum.
+            </li>
+            <li>
+                <strong>Chromatic fringing:</strong> blue or coloured edges created by optics,
+                alignment and phone processing around high-contrast boundaries.
+            </li>
+            <li>
+                <strong>Internal reflections:</strong> displaced coloured spots or streaks caused
+                by bright light reflecting inside the phone lens or eyepiece.
+            </li>
+            <li>
+                <strong>Seeing blur:</strong> rapid distortion produced as light passes through
+                moving layers of Earth’s atmosphere.
+            </li>
+        </ul>
+
+
+        <h2>6. A Better Capture Workflow for the Next Session</h2>
+
+        <p>
+            The next observation can retain considerably more scientific value without requiring
+            a specialised astronomy camera. The most important improvement is not magnification
+            but repeatability.
+        </p>
+
+        <ul>
+            <li>
+                Mount the phone securely and centre its camera over the eyepiece.
+            </li>
+            <li>
+                Lock focus and exposure instead of allowing automatic adjustments between frames.
+            </li>
+            <li>
+                Reduce exposure for the Moon and planets until bright regions retain texture.
+            </li>
+            <li>
+                Record short videos and later select or stack the sharpest frames.
+            </li>
+            <li>
+                Preserve the original files before applying enhancement or social-media
+                compression.
+            </li>
+            <li>
+                Record the date, exact local time, location, telescope, eyepiece, magnification
+                and camera model.
+            </li>
+            <li>
+                Take a second wider exposure for planetary moons and a shorter exposure for the
+                planetary disc, since both cannot always be captured optimally at once.
+            </li>
+        </ul>
+
+        <div class="observation-box">
+            <h3>The most valuable missing measurement</h3>
+            <p>
+                A timestamp would allow the probable Jupiter frame to be compared against a
+                planetary ephemeris. That single piece of information could confirm the target,
+                determine which Galilean moons were visible and establish the orientation of the
+                image.
+            </p>
+        </div>
+
+
+        <h2>7. Conclusion</h2>
+
+        <p>
+            These photographs are technically imperfect in exactly the way first telescope
+            observations are valuable. They preserve the moment when astronomical objects stop
+            being textbook diagrams and become direct observations. The Moon becomes a landscape
+            shaped by impacts and grazing sunlight. Saturn becomes a planet physically encircled
+            by a ring system. A bright point beside smaller points becomes a possible miniature
+            planetary system.
+        </p>
+
+        <p>
+            The archive also demonstrates an important scientific habit: observation and
+            interpretation must remain separate. Some identifications are certain, others are
+            strongly supported, and one remains provisional because essential metadata is
+            missing. Treating that uncertainty openly does not weaken the observation. It turns a
+            set of photographs into a more careful and reproducible record of the night sky.
+        </p>
+
+
+        <section
+            aria-labelledby="references-heading"
+            style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee;"
+        >
+            <h2 id="references-heading" style="margin-top: 0;">References</h2>
+
+            <ol class="reference-list">
+                <li>
+                    NASA Science.
+                    “Lunar Photography Guide.”
+                    <a
+                        href="https://science.nasa.gov/moon/photography-guide/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >science.nasa.gov/moon/photography-guide</a>.
+                </li>
+
+                <li>
+                    NASA Science.
+                    “Moon Viewing Tips.”
+                    <a
+                        href="https://science.nasa.gov/moon/viewing-tips/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >science.nasa.gov/moon/viewing-tips</a>.
+                </li>
+
+                <li>
+                    NASA Science.
+                    “Tycho Crater on the Moon.”
+                    <a
+                        href="https://science.nasa.gov/resource/tycho-crater-on-the-moon-labeled/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >science.nasa.gov/resource/tycho-crater-on-the-moon-labeled</a>.
+                </li>
+
+                <li>
+                    NASA Science.
+                    “Saturn’s Rings.”
+                    <a
+                        href="https://science.nasa.gov/photojournal/saturns-rings/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >science.nasa.gov/photojournal/saturns-rings</a>.
+                </li>
+
+                <li>
+                    NASA Science.
+                    “Jupiter Moons.”
+                    <a
+                        href="https://science.nasa.gov/jupiter/jupiter-moons/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >science.nasa.gov/jupiter/jupiter-moons</a>.
+                </li>
+
+                <li>
+                    NASA Science.
+                    “Galileo’s Observations of the Moon, Jupiter, Venus and the Sun.”
+                    <a
+                        href="https://science.nasa.gov/solar-system/galileos-observations-of-the-moon-jupiter-venus-and-the-sun/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >science.nasa.gov/solar-system/galileos-observations</a>.
+                </li>
+            </ol>
+        </section>
+
+    </article>
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 Nikolaos Bermparis — All Rights Reserved.
+    </div>
+</footer>
+
+<script>
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("show");
+            navToggle.classList.toggle("open", isOpen);
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("show");
+                navToggle.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+</script>
+
+</body>
+</html>
