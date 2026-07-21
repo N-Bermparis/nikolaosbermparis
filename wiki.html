@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiki | Nikolaos Bermparis</title>
+  <meta name="description" content="A categorized directory of work, research, standards, personal writing, media and useful references curated by Nikolaos Bermparis." />
+  <link rel="icon" type="image/x-icon" href="images/pixel image.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="wiki-list-page">
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <div class="brand">Nikolaos Bermparis</div>
+      <span class="badge">Researcher • Cybersecurity &amp; PQC</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="https://github.com/N-Bermparis" target="_blank" rel="noopener">Projects</a></li>
+      <li><a href="index.html#events">Presentations</a></li>
+      <li><a href="index.html#research">Research Topics</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="wiki.html">Wiki</a></li>
+      <li><a href="contact/secure.html">Contact / CV</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="page-hero">
+  <div class="container content-shell">
+    <span class="eyebrow">Personal knowledge directory</span>
+    <h1>Wiki</h1>
+    <p>A continuous directory of pages and links I use for work, research, learning and inspiration. Each entry follows the format URL — Title.</p>
+
+  </div>
+</header>
+<main>
+<section>
+  <div class="container wiki-grid">
+
+
+
+
+    <article class="wiki-section" id="elsewhere">
+      <h2>Everything Else</h2>
+      <ul class="link-directory">
+        <li><a href="art/books.html">art/books.html</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Favorite Books</strong></li>
+        <li><a href="paintings.html">paintings.html</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Paintings Collection</strong></li>
+        <li><a href="library.html">library.html</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Knowledge Library</strong></li>
+        <li><a href="resources.html">resources.html</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Legacy Technical Resources Directory</strong></li>
+        <li><a href="https://overthewire.org/wargames" target="_blank" rel="noopener">https://overthewire.org/wargames</a><span class="entry-separator" aria-hidden="true"> — </span><strong>OverTheWire Wargames</strong></li>
+        <li><a href="https://nmap.org/movies/" target="_blank" rel="noopener">https://nmap.org/movies/</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Nmap in Movies</strong></li>
+      </ul>
+    </article>
+
+    <article class="wiki-section" id="media">
+      <h2>Documentaries &amp; Videos</h2>
+      <ul class="link-directory">
+        <li><a href="documentaries.html">documentaries.html</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Full Documentaries Collection</strong></li>
+        <li><a href="https://www.youtube.com/watch?v=VVJldn_MmMY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=VVJldn_MmMY</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Hackers Testifying</strong></li>
+        <li><a href="https://www.youtube.com/watch?v=Ut6VqRx4gQQ" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Ut6VqRx4gQQ</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Anonymous — Web Warriors</strong></li>
+        <li><a href="https://www.youtube.com/watch?v=I2O7blSSzpI&amp;t=258s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=I2O7blSSzpI&amp;t=258s</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Cicada 3301</strong></li>
+        <li><a href="https://www.youtube.com/watch?v=WXuK6gekU1Y" target="_blank" rel="noopener">https://www.youtube.com/watch?v=WXuK6gekU1Y</a><span class="entry-separator" aria-hidden="true"> — </span><strong>AlphaGo</strong></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Neural Networks — 3Blue1Brown</strong></li>
+        <li><a href="https://www.youtube.com/watch?v=XMm0HsmOTFI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=XMm0HsmOTFI</a><span class="entry-separator" aria-hidden="true"> — </span><strong>Linux Documentary</strong></li>
+        <li><a href="https://www.feynmanlectures.caltech.edu/messenger.html" target="_blank" rel="noopener">https://www.feynmanlectures.caltech.edu/messenger.html</a><span class="entry-separator" aria-hidden="true"> — </span><strong>The Feynman Lectures on Physics</strong></li>
+      </ul>
+    </article>
+  </div>
+</section>
+</main>
+<footer><div class="container">© 2026 Nikolaos Bermparis — All Rights Reserved.</div></footer>
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    navToggle.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", navLinks.classList.contains("show"));
+  });
+
+  navLinks.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      navToggle.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
+</body>
+</html>
